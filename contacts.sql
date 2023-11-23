@@ -46,3 +46,23 @@ INSERT INTO PAYS (iso_3, nom, iso_2, nationnalite) VALUES
 ('AUS', 'Australie', 'AU', 'Australienne'),
 ('JPN', 'Japon', 'JP', 'Japonaise'),
 ('BRA', 'Brésil', 'BR', 'Brésilienne');
+
+CREATE TABLE telephone (
+    id INT,
+    id_contact INT,
+    numero VARCHAR(50),
+    type BYTE,
+    FOREIGN KEY (id_contacts)REFERENCES contact(id)
+)
+
+INSERT INTO telephone (id, id_contact, numero, type) VALUES
+(1, 1, '123456789', 'Mobile'),
+(2, 1, '987654321', 'Domicile'),
+(3, 2, '555111222', 'Mobile'),
+(4, 3, '999888777', 'Travail'),
+(5, 4, '333444555', 'Mobile'),
+(6, 5, '777888999', 'Domicile'),
+(7, 6, '111222333', 'Mobile'),
+(8, 7, '444555666', 'Domicile'),
+(9, 8, '666777888', 'Travail'),
+(10, 9, '888999000', 'Mobile');
